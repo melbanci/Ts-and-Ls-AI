@@ -1,0 +1,268 @@
+   <!------------------------------------------------------>
+    <!-- INSTRUCTIONS PAGE 2 (DESCRIBE ORIGINAL TASK) DIV-->
+    <!------------------------------------------------------>
+    <!-- <div id="instructions_page2" class="instructionsDiv">
+        <p id="prior_task_date">You were previously recruited for a Visual Search Task where you were asked to identify a target out of an array of distractors.</p>
+        <p style="font-weight: normal">On each trial, you saw many bars that look like <strong>"L"</strong> shapes, these are the distractors. Your job was to find the target <strong>"T"</strong> shape hidden among the <strong>"L"</strong>s. Here are examples of both <strong>"L"</strong> and <strong>"T"</strong> shapes.</p>
+        <p>  
+            <div style="display: flex; justify-content: space-around;">
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                    <span><u><strong><i>"L" Shapes (distractors)</i></strong></u></span>
+                    <img id="lstim_example" class="exampleSearch" src="instrAIPics/Example_Lstim.png" width=250>
+                </div>
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                    <span><u><strong><i>"T" Shapes (targets)</i></strong></u></span>
+                    <img id="tstim_example" class="exampleSearch" src="instrAIPics/Example_Tstim.png" width=250>
+                </div>
+            </div>
+        </p> 
+        <hr />
+
+        <p style="font-weight: normal">If you need more help remembering the Visual Search Task, click <a href="originalInstructions.html" target="_blank">here</a> to review the instructions in a new window.</p>
+        <p style="font-weight: normal"><i>Once you remember the task, press "START PRACTICE" to conduct a short practice of the Visual Search Task. </i></p>
+            <input type="submit" id="startExperimentButton" class="buttonsDiv" value="START PRACTICE" style="width: 200px; margin-right: 0;" onclick="startBlock()"/>
+    </div> -->
+    <div id="instructions_page2" class="instructionsDiv">
+        <p style="font-weight: normal">This is a visual search task where you will be required to correctly pick a target out of an array of distractors.</p>
+
+        <p style="font-weight: normal">On each trial, you will see many bars that look like <strong>"L"</strong> shapes, these are the distractors. Your job is to find the target <strong>"T"</strong> shape hidden among the <strong>"L"</strong>s. Here are examples of both <strong>"L"</strong> and <strong>"T"</strong> shapes.</p>
+        <p>  
+            <div style="display: flex; justify-content: space-around;">
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                    <span><u><strong><i>"L" Shapes (distractors)</i></strong></u></span>
+                    <img id="lstim_example" class="exampleSearch" src="instrAIPics/Example_Lstim.png" width=250>
+                </div>
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                    <span><u><strong><i>"T" Shapes (targets)</i></strong></u></span>
+                    <img id="tstim_example" class="exampleSearch" src="instrAIPics/Example_Tstim.png" width=250>
+                </div>
+            </div>
+        </p> 
+        <p style="font-weight: normal">The  <i>rotation</i> of the <strong>"L"</strong> and <strong>"T" </strong>shapes can vary, so you may need to look very closely to find the targets. </p>
+        <hr />
+        <p><i>Click the 'NEXT' button below for further instructions.</i></p>
+        <div class="containerDiv" style="text-align: center;">
+            <input type="submit" id="startExperimentButton" class="buttonsDiv" value="NEXT" style="width: 200px; margin-right: 0;" onclick="show_instructions2_5()"/>
+        </div>
+    </div>
+
+    <!--------------------------------------------------->
+    <!-- INSTRUCTIONS PAGE 3 (SURVEY ORIGINAL TASK) DIV-->
+    <!--------------------------------------------------->
+    <div id="instructions_page_previous_task" class="instructionsDiv">
+        <p style="font-weight: normal">Please answer the following questions about the Visual Search Task you previously completed (remember that the task had a total of 42 trials).</p>
+        <br>
+        <form>
+                <div>
+                    <br>
+                    <label for="ethnicity">How well do you remember the previous Visual Search Task?</label>
+                    <select id="original_memory" name="ethnicity">
+                        <option value="">---Choose an option---</option>
+                        <option value="not">Not at all</option>
+                        <option value="barely">Barely remember</option>
+                        <option value="slightly">Slightly remember</option>
+                        <option value="somewhat">Somewhat remember</option>
+                        <option value="moderately">Moderately remember</option>
+                        <option value="mostly">Mostly remember</option>
+                        <option value="remember">Remember perfectly</option>
+                    </select>
+                </div>
+                <div>
+                    <br>
+                    <label for="ethnicity">How well do you remember your performance on the previous Visual Search Task?</label>
+                    <select id="original_performance" name="ethnicity">
+                        <option value="">---Choose an option---</option>
+                        <option value="not">Not at all</option>
+                        <option value="barely">Barely remember</option>
+                        <option value="slightly">Slightly remember</option>
+                        <option value="somewhat">Somewhat remember</option>
+                        <option value="moderately">Moderately remember</option>
+                        <option value="mostly">Mostly remember</option>
+                        <option value="remember">Remember perfectly</option>
+                    </select>
+                </div>
+                <div>
+                    <br>
+                    <label for="difficulty">How would you rate the difficulty of the Visual Search Task?</label>
+                    <select id="original_difficulty" name="difficulty">
+                        <option value="">---Choose an option---</option>
+                        <option value="1">Very easy</option>
+                        <option value="2">Easy</option>
+                        <option value="3">Neither easy nor difficult</option>
+                        <option value="4">Difficult</option>
+                        <option value="5">Very difficult</option>
+                    </select>
+                </div>
+                <div>
+                    <br>
+                    <label for="accuracy">How would you estimate your percentage of correct trials on the Visual Search Task?</label>
+                    <input type="range" id="accuracy-slider" name="accuracy-slider" min="0" max="100" value="0" oninput="this.nextElementSibling.value = this.value">
+                    <output>0</output>
+                </div>
+                <div>
+                    <br>
+                    <label for="time">On the Visual Search task, you had to answer each trial within 15 seconds. On average, how much time do you believe you spent on each trial in seconds?</label>
+                    <input type="range" id="time-slider" name="time-slider" min="0" max="15" value="0" oninput="this.nextElementSibling.value = this.value">
+                    <output>0</output>
+                </div>
+                <br>
+                <br>
+                <div class="containerDiv">
+                    <!-- <input type="submit" id="next1Button" class="buttonsDiv" value="NEXT" style="width: 200px" onclick="show_instructions4()"/> -->
+                    <input type="submit" id="next1Button" class="buttonsDiv" value="NEXT" style="width: 200px"/>
+                </div>
+        </form>
+    </div>
+    
+    <!--------------------------------------------------->
+    <!-- INSTRUCTIONS PAGE 4 (SHOW PREVIOUS PERFORMANCE) DIV-->
+    <!--------------------------------------------------->
+
+    <div id="instructions_page_previous_bonus" class="instructionsDiv">
+        <p id="past_performance">On the Visual Search task, you were asked to be both fast and precise. Your average accuracy was x% and your average time taken per trial was t seconds. Your total score per our internal metric was x points. </p>
+        <p style="font-weight: normal">This new task is a modified version of the previous Visual Search Task. Your goal on this task is to beat your previous score.</p>
+        <hr/>
+        <p><i>Click the 'NEXT' button below for further instructions.</i></p>
+        <div class="containerDiv" style="text-align: center;">
+            <input type="submit" id="startExperimentButton" class="buttonsDiv" value="NEXT" style="width: 200px; margin-right: 0;" onclick="show_instructions2_5()"/>
+        </div>
+    </div>
+
+    <!---------------------------------------------------------------->
+    <!-- INSTRUCTIONS PAGE 5 (AI HOVER/ PREDICTION INSTRUCTIONS) DIV-->
+    <!---------------------------------------------------------------->
+    <div id="instructions_page2_5" class="instructionsDiv"> 
+        <p>In this task, you will be assisted by an intelligent agent whose job is to predict whether a trial contains a "T".</p>
+        <p>The intelligent agent is about as accurate as you are. It can sometimes make mistakes, though not always the same ones a human would make.</p>
+        <hr />
+        <p><i>Click the 'NEXT' button below for further instructions.</i></p> 
+        <!-- NEXT BUTTON -->
+        <div class="containerDiv">
+            <input type="submit" id="next3Button" class="buttonsDiv" value="NEXT" style="width: 200px;" onclick="show_instructions3()"/>  
+        </div>
+    </div>
+
+    <div id="instructions_page3" class="instructionsDiv"> 
+        <p>Before each trial, you will see the agent's prediction of either "T present" inside a <span style="color: #E00E45;font-weight: bold">red</span> rectangle or "T NOT present" inside a <span style="color: #0CBD9F;font-weight: bold">green</span> rectangle.</p>
+        <img id="hoverAIpic" class="exampleSearch" src="instrAIPics/hoverAI.png" width=600>
+        <p><strong>After reading the prediction, hover your cursor over the circle to proceed to the trial</strong> </p>
+        <img id="hovercirclepic" class="exampleSearch" src="instrAIPics/HoverCircle_Cursor.png" width=350>
+        <hr />
+        <p><i>Click the 'NEXT' button below for further instructions.</i></p> 
+        <!-- NEXT BUTTON -->
+        <div class="containerDiv">
+            <input type="submit" id="next3Button" class="buttonsDiv" value="NEXT" style="width: 200px;" onclick="show_instructions4()"/>  
+        </div>
+    </div>
+
+    <!---------------------------------------------------------------->
+    <!-- INSTRUCTIONS PAGE 6 (AI STIM DISPLAY INSTRUCTIONS) DIV-->
+    <!---------------------------------------------------------------->
+
+    <div id="instructions_page4" class="instructionsDiv"> 
+        <p>On each trial, the color of the rectangular border corresponds to the agent's prediction on that trial. A <span style="color: #E00E45;font-weight: bold">red</span> border indicates a "T present" prediction and a <span style="color: #0CBD9F;font-weight: bold">green</span> border indicates a "T NOT present" prediction</p>
+        <p>For example:</p>
+        <p>  
+            <div style="display: flex; justify-content: space-around;">
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                    <span><u><strong><i>"T is present" prediction</i></strong></u></span>
+                    <img id="Example_TargetP" class="exampleSearch" src="instrAIPics/stimAI_present.png" width=250>
+                </div>
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                    <span><u><strong><i>"T is NOT present" prediction</i></strong></u></span>
+                    <img id="Example_TargetA" class="exampleSearch" src="instrAIPics/stimAI_absent.png" width=250>
+                </div>
+            </div>            
+        </p> 
+        <p style="font-weight: normal; color: red;"><strong>There will never be more than one T in each array.</strong></p>
+        <hr/>
+        <p><i>Click the 'NEXT' button below for further instructions.</i></p> 
+        <!-- NEXT BUTTON -->
+        <div class="containerDiv">
+            <input type="submit" id="next3Button" class="buttonsDiv" value="NEXT" style="width: 200px;" onclick="show_instructions5()"/>  
+        </div>
+    </div>
+
+    <!---------------------------------------------------------------->
+    <!-- INSTRUCTIONS PAGE 7 (STIM DISPLAY INSTRUCTIONS) DIV-->
+    <!---------------------------------------------------------------->
+
+    <div id="instructions_page5" class="instructionsDiv"> 
+        <p>If you find a "T", use your mouse to select it with a click. An empty circle to mark your selection will appear if you click on either a "T" or a "L".</p>
+        <img id="targetAbsentexample" class="exampleSearch" src="instrAIPics/ClickProgression.png" width=250>
+        <p>If you do not find a "T", do NOT click on anything</p>
+        <p>When you have finished, press the <strong>SPACEBAR</strong> to indicate that you are ready to move on.</p>
+        <p>Excellent searchers are not only accurate, but also fast and precise. Please do your best to:</p>
+        <ol>
+            <li>Correctly find the target "T"</li>
+            <li>Avoid clicking on any distractor "L"s</li>
+            <li>Finish searching the array as quickly as possible</li>
+        </ol>
+        <p><strong>Your performance on this task will be evaluated based on the above criteria.</strong></p>
+        <hr/>
+        <p><i>Click the 'NEXT' button for further instructions. </i></p> 
+        <!-- NEXT BUTTON -->
+        <div class="containerDiv">
+            <input type="submit" id="next3Button" class="buttonsDiv" value="NEXT" style="width: 200px;" onclick="show_instructions6()"/>  
+        </div>
+    </div>
+    <!-------------------------------------------------------------------------------->
+    <!-- INSTRUCTIONS PAGE 8 (PRACTICE INSTRUCTIONS) DIV---------->
+    <!-------------------------------------------------------------------------------->
+    <!-- <div id="instructions_page6" class="instructionsDiv"> 
+        <p><strong>In practice trials ONLY: </strong>After pressing the SPACEBAR, your selection will fill with a colored shape which reflects whether it was correct or incorrect.</p>
+        <p> A <strong> green circle </strong>indicates a correct target selection, and a <strong>red triangle</strong> indicates an incorrect selection. A missed target will be <strong>circled in red</strong>. </p>
+
+        <p> For example:</p>
+        <div style="display: flex; justify-content: center;">
+            <div style="flex: 1; text-align: center;">
+                <strong><u>Correct</u></strong>
+                <p><img id="CorrectClickPic" class="exampleSearch" src="instrAIPics/feedback_correct.png" width=100></p>
+            </div>
+            <div style="flex: 1; text-align: center;">
+                <strong><u>Incorrect</u></strong>
+                <p><img id="IncorrectClickPic" class="exampleSearch" src="instrAIPics/feedback_wrong.png" width=100></p>
+            </div>
+            <div style="flex: 1; text-align: center;">
+                <strong><u>Missed</u></strong>
+                <p><img id="MissedTargetPic" class="exampleSearch" src="instrAIPics/feedback_missed.png" width=125></p>
+            </div>
+        </div>
+
+        <p style="font-weight: normal"><strong>This feedback is only available during practice. In the main experiment, you WILL NOT see any of these markers after pressing the SPACEBAR.</strong></p>
+        <hr />
+        <p> <i>Click the 'NEXT' button for further instructions.</i></p>
+        START PRACTICE BUTTON -->
+        <!-- <div class="containerDiv" style="text-align: center;">
+            <input type="submit" id="next3Button" class="buttonsDiv" value="NEXT" style="width: 200px; margin-right: 0;" onclick="show_instructions7()"/>
+        </div>
+    </div> -->
+
+    <div id="instructions_page6" class="instructionsDiv"> 
+        <p><strong>In practice trials ONLY: </strong>After pressing the SPACEBAR, a grey symbol will appear on your selection to indicate whether it was correct or incorrect</p>
+        <p> A <strong> check mark </strong>indicates a correct target selection, and a <strong>cross/strong> indicates an incorrect selection. A missed target will be <strong>circled in grey</strong>. </p>
+
+        <p> For example:</p>
+        <div style="display: flex; justify-content: center;">
+            <div style="flex: 1; text-align: center;">
+                <strong><u>Correct</u></strong>
+                <p><img id="CorrectClickPic" class="exampleSearch" src="instrAIPics/feedback_correct.png" width=100></p>
+            </div>
+            <div style="flex: 1; text-align: center;">
+                <strong><u>Incorrect</u></strong>
+                <p><img id="IncorrectClickPic" class="exampleSearch" src="instrAIPics/feedback_wrong.png" width=100></p>
+            </div>
+            <div style="flex: 1; text-align: center;">
+                <strong><u>Missed</u></strong>
+                <p><img id="MissedTargetPic" class="exampleSearch" src="instrAIPics/feedback_missed.png" width=125></p>
+            </div>
+        </div>
+
+        <p style="font-weight: normal"><strong>This feedback is only available during practice. In the main experiment, you WILL NOT see any of these markers after pressing the SPACEBAR.</strong></p>
+        <hr />
+        <p> <i>Click the 'NEXT' button for further instructions.</i></p>
+        <!-- START PRACTICE BUTTON -->
+        <div class="containerDiv" style="text-align: center;">
+            <input type="submit" id="next3Button" class="buttonsDiv" value="NEXT" style="width: 200px; margin-right: 0;" onclick="show_instructions7()"/>
+        </div>
+    </div>

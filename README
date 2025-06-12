@@ -1,0 +1,13 @@
+README
+- takes PROLIFIC_PID, STUDY_ID, SESSION_ID url params from Qualtrics
+- skips consent
+- redirects to Prolific submission page
+--
+1. Configure experiment in experimentDesign.js
+    - Both mainExperiment.html and expStructGenerator.html run experimentDesign.js
+2. Run experimentStructureGenerator.html in browser to pre-generate experiment struct jsons for N participants
+3. Run mainExperiment.html for Ts and Ls experiment (option to preload expStruct from json file or not)
+4. Edit instructions text in mainExperiment.html
+5. ShowIntructions.js contains script for displaying consent, instructions (including img tags), and demographics.
+6. Set experiment name and version in mainExperiment.js. View structure of saved data in mainExperiment.js
+7. Participants are directed to Prolific via the submission url after data is uploaded by saveData.php

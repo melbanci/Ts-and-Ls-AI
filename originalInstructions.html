@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visual Search Experiment</title>
+    <link rel="stylesheet" type="text/css" href="mainExperiment.css">
+</head>
+<body style="height: 200vh;">
+
+    <div class="original_instructionsDiv">
+        <!-------------------------------------------->
+        <!-- INSTRUCTIONS PAGE 2 (DESCRIBE STIMULI) DIV-->
+        <!-------------------------------------------->
+        <div id="original_instructions_page2">
+            <p style="font-weight: normal">This is a visual search task where you will be required to correctly pick a target out of an array of distractors.</p>
+            <p style="font-weight: normal">On each trial, you will see many bars that look like <strong>"L"</strong> shapes, these are the distractors.</p>
+            <p style="font-weight: normal">Your job is to find the target <strong>"T"</strong> shape hidden among the <strong>"L"</strong>s.</p>
+            <hr />
+            <p> Here are examples of both <strong>"L"</strong> and <strong>"T"</strong> shapes.</p>
+            <p>  
+                <div style="display: flex; justify-content: space-around;">
+                    <div style="display: flex; flex-direction: column; align-items: center;">
+                        <span><u><strong><i>"L" Shapes (distractors)</i></strong></u></span>
+                        <img id="Example_Ls" class="exampleSearch" src="instrPics/Example_Lstim.png" width=250>
+                    </div>
+                    <div style="display: flex; flex-direction: column; align-items: center;">
+                        <span><u><strong><i>"T" Shapes (targets)</i></strong></u></span>
+                        <img id="Example_Ts" class="exampleSearch" src="instrPics/Example_Tstim.png" width=250>
+                    </div>
+                </div>
+            </p> 
+            <p style="font-weight: normal">The  <i>rotation</i> of the <strong>"L"</strong> and <strong>"T" </strong>shapes can vary, so you may need to look very closely to find the targets. </p>
+            <hr />
+        </div>
+
+        <!-------------------------------------------->
+        <!-- INSTRUCTIONS PAGE 3 (DESCRIBE TRIAL TYPES) DIV-->
+        <!-------------------------------------------->
+        <div id="original_instructions_page3"> 
+            <p style="font-weight: normal">Here are some example arrays. Each array has <strong>a maximum of one "T"</strong> or no "T"s at all.</p>
+            <p>For example:</p>
+            <p>  
+                <div style="display: flex; justify-content: space-around;">
+                    <div style="display: flex; flex-direction: column; align-items: center;">
+                        <span><u><strong><i>"T" - Present Trial</i></strong></u></span>
+                        <img id="Example_TargetPresent" class="exampleSearch" src="instrPics/Example_TargetPresent.png" width=250>
+                    </div>
+                    <div style="display: flex; flex-direction: column; align-items: center;">
+                        <span><u><strong><i>"T" - Absent Trial</i></strong></u></span>
+                        <img id="Example_TargetAbsent" class="exampleSearch" src="instrPics/Example_TargetAbsent.png" width=250>
+                    </div>
+                </div>            
+            </p> 
+            <p style="font-weight: normal; color: red;"><strong>There will never be more than one T in each array.</strong></p>
+            <hr />
+        </div>
+
+        <!-------------------------------------------->
+        <!-- INSTRUCTIONS PAGE 4 (DESCRIBE TARGET SELECTION) DIV-->
+        <!-------------------------------------------->
+        <div id="original_instructions_page4">
+            <p><strong style="color: red;">If you find a "T",</strong> use your mouse to select it with a click. An empty circle to mark your selection will appear if you click on either a "T" or a "L". <strong>You can only make ONE selection per trial.</strong></p>
+            <p style="text-align: center;">
+                <img id="ClickProgression" class="exampleSearch" src="" width="200">
+            </p>
+            <p><strong style="color: red;">If the array does NOT contain a "T",</strong> do NOT click on anything.</p> 
+            <p><strong style="color: red;">When you have finished searching,</strong> press the <strong>SPACEBAR</strong> to indicate that you are ready to move on.</p>
+            <p>Excellent searchers are not only accurate, but also fast and precise. Please do your best to:</p>
+            <ol>
+                <li>Correctly find the target "T"</li>
+                <li>Avoid clicking on any distractor "L"s</li>
+                <li>Finish searching the array as quickly as possible</li>
+            </ol>
+            <hr />
+        </div>    
+            
+        <!-------------------------------------------->
+        <!-- INSTRUCTIONS PAGE 5 (DESCRIBE HOVER TO PROCEED) DIV-->
+        <!-------------------------------------------->
+        <div id="original_instructions_page5" > 
+            <p>A black circle will appear at the center of the display after you press the SPACEBAR. </p>
+            <p><strong>Hover your cursor over the circle to proceed to the next trial:</strong> </p>
+            <p style="text-align: center;">
+                <img id="Hover_Cursor" class="exampleSearch" src="instrPics/HoverCircle_Cursor.png" width=300>
+            </p>
+            <hr />
+
+        </div>
+
+        <!-------------------------------------------->
+        <!-- INSTRUCTIONS PAGE 6 (DESCRIBE FEEDBACK) DIV-->
+        <!-------------------------------------------->
+        <div id="original_instructions_page6">
+            <p><strong style="color: red;">In practice trials ONLY: </strong>After pressing the SPACEBAR, your selection will fill with a colored shape which reflects whether it was correct or incorrect.</p>
+            <p> A <strong> green circle </strong>indicates a correct target selection, and a <strong>red triangle</strong> indicates an incorrect selection. A missed target will be <strong>circled in red</strong>. </p>
+            <p> For example:</p>
+            <div style="display: flex; justify-content: center;">
+                <div style="flex: 1; text-align: center;">
+                    <strong><u>Correct</u></strong>
+                    <p><img id="CorrectClick" class="exampleSearch" src="instrPics/Correct_Click.png" width=75></p>
+                </div>
+                <div style="flex: 1; text-align: center;">
+                    <strong><u>Incorrect</u></strong>
+                    <p><img id="IncorrectClick" class="exampleSearch" src="instrPics/Incorrect_Click.png" width=75></p>
+                </div>
+                <div style="flex: 1; text-align: center;">
+                    <strong><u>Missed</u></strong>
+                    <p><img id="MissedTarget" class="exampleSearch" src="instrPics/Missed_Target.png" width=75></p>
+                </div>
+            </div>
+            <p style="font-weight: normal; color: red;"><strong>This feedback is only available during practice. In the main experiment, you WILL NOT see any of these markers after pressing the SPACEBAR.</strong></p>
+            <hr />
+        </div>
+
+        <!-------------------------------------------->
+        <!-- INSTRUCTIONS PAGE 7 (OVERVIEW BEFORE PRACTICE) DIV-->
+        <!-------------------------------------------->
+        <div id="original_instructions_page7"> 
+            <p> On each trial, you have <strong id="time-limit">XXX seconds</strong> to search the array and press SPACEBAR to move on. <strong>If you take longer than this, the trial is considered failed.</strong></p>
+            <p> That is all of the instructions! Now, you have a chance to practice the task before beginning the main experiment.	</p>
+            <hr />
+        </div>
+    </div>
+        
+</body>
+
+</html>
